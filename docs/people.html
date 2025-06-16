@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BBioX Research Group - Our Team">
+    <meta name="keywords" content="biomedical research, team, faculty, researchers">
+    <meta name="author" content="BBioX Research Group">
+    <meta property="og:title" content="BBioX Research Group - Our Team">
+    <meta property="og:description" content="Meet our team of researchers and faculty members">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohofar.github.io/bbiox_lab_mo/people.html">
+    <title>Our Team - BBioX Research Group</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 2rem;
+        }
+
+        .team-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+
+        .team-info .role {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-info p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .team-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .team-social a {
+            color: #4b5563;
+            font-size: 1.25rem;
+            transition: color 0.3s ease;
+        }
+
+        .team-social a:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">BBioX</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="people.html" class="active">People</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="people" id="people">
+            <div class="container">
+                <h2>Our Team</h2>
+                
+                <!-- Principal Investigator -->
+                <div class="pi-section">
+                    <h3>Principal Investigator</h3>
+                    <div class="team-member pi">
+                        <img src="images/Nazli.jpg" alt="Dr. Nazli Tumer" class="team-member-image">
+                        <h3>Dr. Ir. Nazli Tumer</h3>
+                        <p class="role">Principal Investigator</p>
+                        <p class="title">Assistant Professor</p>
+                        <p class="department">Department of Biomechanical Engineering</p>
+                        <p class="affiliation">Faculty of Mechanical Engineering, Delft University of Technology</p>
+                        <p class="affiliation">Department of Orthopedics, Erasmus MC</p>
+                    </div>
+                </div>
+
+                <!-- PhD Students -->
+                <div class="phd-section">
+                    <h3>PhD Students</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="images/edwin.jpg" alt="Ir. Edwin Tay" class="team-member-image">
+                            <h3>Ir. Edwin Tay</h3>
+                            <p class="role">PhD Candidate</p>
+                            <p class="research">Research: Bone shape and skeletal diseases</p>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/morteza.jpg" alt="Morteza Homayounfar" class="team-member-image">
+                            <h3>Morteza Homayounfar</h3>
+                            <p class="role">PhD Candidate</p>
+                            <p class="research">Research: Skeletal development</p>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/mohammad.jpg" alt="Mohammad Mahmoodi Gahr" class="team-member-image">
+                            <h3>Mohammad Mahmoodi Gahr</h3>
+                            <p class="role">PhD Candidate</p>
+                            <p class="research">Research: Mechanical forces in bone and cartilage</p>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/sabrina.jpg" alt="Sabrina Hörmann" class="team-member-image">
+                            <h3>Sabrina Hörmann</h3>
+                            <p class="role">PhD Candidate</p>
+                            <p class="research">Research: Bone and cartilage biomechanics</p>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/sara.jpg" alt="Sara Nuvoli" class="team-member-image">
+                            <h3>Sara Nuvoli</h3>
+                            <p class="role">PhD Candidate</p>
+                            <p class="research">Research: Skeletal biomechanics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Alumni</h2>
+                <div class="alumni-list">
+                    <ul>
+                        <li>Yujiang Peng, Engineering Vibrating Nanopatterns for Killing Bacteria, PostDoc 2021-2022.</li>
+                        <li>Liza de Wilde, Exploring depletion effects and binding dynamics in superselective DNA Nanostars, MSc 2023-2024.</li>
+                        <li>Ties Wolterbeek, Automatic detection and grading of osteophytes on knee magnetic resonance images using deep learning, MSc 2023-2024.</li>
+                        <li>Sofia Spinthaki, Assessment of bone microarchitecture with photon-counting detector computed tomography, MSc 2023-2024.</li>
+                        <li>Beatrice Gagliostri, Exploring mechanisms of intervertebral disc herniation in a range of in-vitro animal models, MSc 2023-2024.</li>
+                        <li>Sanne Cox, Optimal screw position for guided bone growth in slipped capital femoral epiphysis, MSc 2023-2024.</li>
+                        <li>Rimke Beinema, Development of a finite element model of the achilles tendon: evaluating local displacement estimation, MSc 2023-2024.</li>
+                        <li>Huib Achten, Design of an instrumented hip implant and its performance evaluation, MSc 2022-2023.</li>
+                        <li>Rui Neves de Liva, Design of a patient-specific lunate implant and its performance evaluation, MSc 2022-2023.</li>
+                        <li>Casper Donkevoort, Studying the effects of hip rotations on a 2D statistical shape model of the hip joint, MSc 2022-2023.</li>
+                        <li>Thanasis Argyropoulos, Design of an instrumented hand brace and its performance evaluation, MSc 2022 – 2023.</li>
+                        <li>Maaike Talsma, Computational modelling of the knee to study initiation and progression of osteoarthritis after anterior cruciate ligament reconstruction, MSc 2022 – 2023.</li>
+                        <li>Afaq Khan, Design of a mandibular implant with gradient materials, MSc 2022 – 2023.</li>
+                        <li>Vera Ederveen, Automated alpha angle computation for the quantitative evaluation of CAM morphology, MSc 2022 – 2023.</li>
+                        <li>Jet Molenaar, The development of a computational workflow for the semi-automated construction of patient-specific finite element models of tibial fracture fixation, MSc 2022 – 2023.</li>
+                        <li>David Wildoer, Sensitivity of a coupled modelling workflow to knee marker displacement, MSc 2022 – 2023.</li>
+                        <li>Nagme Renkli, 3D printed patient-specific surgical guide with a lateral hinge protecting K-wire and a soft tissue protecting sleeve for open wedge high tibial osteotomy: a pilot study, MSc 2022 – 2023.</li>
+                        <li>Hugo van Duijnhoven, Biomechanical loading behavior of a knee joint distraction device as treatment for osteoarthrosis, MSc 2022 – 2023.</li>
+                        <li>Wilrik Creeze, Development of a motion guidance device for 4D CT scans of the wrist, MSc 2021- 2022.</li>
+                        <li>Aurora Tjernshaugen, Human Mesenchymal stem cell behaviour on meso-scale substrate curvature: a finite element analysis of the effects of substrate curvature on cellular traction forces and morphology, MSc 2021-2022.</li>
+                        <li>Anastasis Alexopoulos, Early detection of knee osteoarthritis using deep learning-based MRI features, MSc 2021-2022.</li>
+                        <li>Riis Kaak, Static strength analysis of a novel custom triflange acetabular component by experimental testing and finite element modelling, MSc 2021-2022.</li>
+                        <li>Daniel Donse, A deep learning approach to (semi-) automatically track bone movement in ultrasound images of patients with a unilateral transtibial prosthesis, MSc 2021-2022.</li>
+                        <li>Marike Fokker, Development of crumpled-based meta-biomaterials as bone filling substitutes, MSc 2021-2022.</li>
+                        <li>Arthur van Kootwijk, Development of a workflow for designing patient-specific mandibular reconstruction implants and predicting their performance through experimentally validated finite element models, MSc 2020-2021.</li>
+                        <li>Niek Rutten, Effect of different femur shapes on the development of cam-type deformities, MSc 2020-2021.</li>
+                        <li>Miriam Oldhoff, Design and optimisation of an additively manufactured patient-specific partial mandible reconstruction implant, MSc 2019-2020.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@bbiox.org</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Research Park, Science City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="people.html">Our Team</a></li>
+                        <li><a href="projects.html">Research Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BBioX Research Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
