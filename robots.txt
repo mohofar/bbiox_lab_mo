@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohofar.github.io/bbiox_lab_mo/sitemap.xml 
