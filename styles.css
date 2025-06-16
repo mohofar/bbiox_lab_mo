@@ -281,6 +281,66 @@ section h2 {
     color: #1e293b;
 }
 
+/* Team Section */
+.team-member {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.team-member .role {
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .title,
+.team-member .department,
+.team-member .affiliation,
+.team-member .research {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.alumni-list {
+    margin-top: 2rem;
+}
+
+.alumni-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alumni-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.alumni-list li:last-child {
+    border-bottom: none;
+}
+
+/* Update existing styles */
+.people {
+    padding: 4rem 0;
+    background-color: #f8fafc;
+}
+
+.people h2 {
+    margin-bottom: 2rem;
+    color: #1e293b;
+    font-size: 2rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .mobile-menu-btn {
