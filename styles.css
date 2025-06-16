@@ -296,6 +296,11 @@ section h2 {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
 }
 
 .team-member-image {
@@ -334,9 +339,9 @@ section h2 {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .alumni-list {
@@ -459,4 +464,42 @@ section h2 {
         width: 150px;
         height: 150px;
     }
+
+    .team-member.pi .team-member-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.pi-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pi-section h3 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.team-member.pi {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.team-member.pi .team-member-image {
+    width: 250px;
+    height: 250px;
+}
+
+.phd-section {
+    margin-top: 40px;
+}
+
+.phd-section h3 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    text-align: center;
 } 
