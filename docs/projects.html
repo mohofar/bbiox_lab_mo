@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BBioX Research Group - Our Research Projects">
-    <meta name="keywords" content="biomedical research, projects, research areas">
+    <meta name="keywords" content="biomechanics, skeletal development, medical imaging, computational modeling">
     <meta name="author" content="BBioX Research Group">
     <meta property="og:title" content="BBioX Research Group - Research Projects">
-    <meta property="og:description" content="Explore our current research projects and areas of focus">
+    <meta property="og:description" content="Explore our current research projects in biomechanics and skeletal development">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mohofar.github.io/bbiox_lab_mo/projects.html">
     <title>Research Projects - BBioX Research Group</title>
@@ -42,6 +42,12 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2563eb;
         }
 
         .project-content {
@@ -57,6 +63,7 @@
         .project-content p {
             color: #4b5563;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .project-tags {
@@ -75,20 +82,20 @@
             font-weight: 500;
         }
 
-        .project-link {
-            display: inline-block;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .project-collaborators {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
         }
 
-        .project-link:hover {
-            color: #1d4ed8;
-        }
-
-        .project-link i {
-            margin-left: 0.5rem;
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: #475569;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -115,46 +122,82 @@
         <section class="about" style="margin-top: 4rem;">
             <div class="container">
                 <h2>Research Projects</h2>
+                <p class="section-intro">Our research focuses on understanding skeletal development and disorders through advanced biomechanical analysis, computational modeling, and medical imaging. We combine experimental approaches with cutting-edge computational methods to advance treatment strategies.</p>
+                
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1581093458791-9d15482442f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Genomic Analysis Project" class="project-image">
+                        <div class="project-image">
+                            <i class="fas fa-bone"></i>
+                        </div>
                         <div class="project-content">
-                            <h3>Advanced Genomic Analysis</h3>
-                            <p>Developing novel algorithms for analyzing large-scale genomic data to identify disease markers and potential therapeutic targets.</p>
+                            <h3>Skeletal Shape Analysis and Disease Prediction</h3>
+                            <p>Developing advanced computational methods to analyze bone shape variations and their relationship to skeletal diseases. This project combines medical imaging with machine learning to identify early markers of skeletal disorders and improve diagnostic accuracy.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Genomics</span>
+                                <span class="project-tag">Medical Imaging</span>
                                 <span class="project-tag">Machine Learning</span>
-                                <span class="project-tag">Bioinformatics</span>
+                                <span class="project-tag">Shape Analysis</span>
+                                <span class="project-tag">Clinical Applications</span>
                             </div>
-                            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <div class="project-collaborators">
+                                Collaboration with Department of Orthopedics, Erasmus MC
+                            </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1581093458791-9d15482442f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Drug Discovery Project" class="project-image">
+                        <div class="project-image">
+                            <i class="fas fa-microscope"></i>
+                        </div>
                         <div class="project-content">
-                            <h3>AI-Driven Drug Discovery</h3>
-                            <p>Utilizing artificial intelligence to accelerate the drug discovery process and identify novel therapeutic compounds.</p>
+                            <h3>Biomechanical Analysis of Joint Development</h3>
+                            <p>Investigating the mechanical forces and their influence on joint development and adaptation. This research combines experimental biomechanics with computational modeling to understand how mechanical loading affects skeletal growth and remodeling.</p>
                             <div class="project-tags">
-                                <span class="project-tag">AI</span>
-                                <span class="project-tag">Drug Discovery</span>
-                                <span class="project-tag">Computational Biology</span>
+                                <span class="project-tag">Biomechanics</span>
+                                <span class="project-tag">Tissue Engineering</span>
+                                <span class="project-tag">Computational Modeling</span>
+                                <span class="project-tag">Joint Development</span>
                             </div>
-                            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <div class="project-collaborators">
+                                In collaboration with Faculty of Mechanical Engineering, TU Delft
+                            </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1581093458791-9d15482442f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Personalized Medicine Project" class="project-image">
+                        <div class="project-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
                         <div class="project-content">
-                            <h3>Personalized Medicine Platform</h3>
-                            <p>Creating an integrated platform for personalized treatment recommendations based on patient-specific genomic data.</p>
+                            <h3>Computer Vision for Skeletal Assessment</h3>
+                            <p>Developing advanced computer vision and deep learning techniques for automated analysis of medical images in skeletal assessment. This project aims to improve the accuracy and efficiency of diagnostic procedures in orthopedics.</p>
                             <div class="project-tags">
-                                <span class="project-tag">Personalized Medicine</span>
-                                <span class="project-tag">Clinical Research</span>
-                                <span class="project-tag">Data Science</span>
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">Deep Learning</span>
+                                <span class="project-tag">Medical Imaging</span>
+                                <span class="project-tag">Diagnostic Tools</span>
                             </div>
-                            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <div class="project-collaborators">
+                                Joint project with Medical Imaging Department
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Patient-Specific Implant Design</h3>
+                            <p>Creating innovative approaches for designing and optimizing patient-specific implants using computational modeling and additive manufacturing. This research focuses on improving implant performance and surgical outcomes through personalized solutions.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Implant Design</span>
+                                <span class="project-tag">FEM Analysis</span>
+                                <span class="project-tag">3D Printing</span>
+                                <span class="project-tag">Surgical Planning</span>
+                            </div>
+                            <div class="project-collaborators">
+                                Collaboration with Clinical Partners
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,13 +209,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-envelope"></i> info@bbiox.org</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Research Park, Science City</p>
+                    <h3>BBioX Research Group</h3>
+                    <p>Department of Biomechanical Engineering</p>
+                    <p>Faculty of Mechanical Engineering</p>
+                    <p>Delft University of Technology</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Navigation</h3>
                     <ul>
                         <li><a href="people.html">Our Team</a></li>
                         <li><a href="projects.html">Research Projects</a></li>
@@ -180,19 +223,22 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 BBioX Research Group. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+    </script>
 </body>
 </html> 
