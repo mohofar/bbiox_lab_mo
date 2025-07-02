@@ -21,9 +21,9 @@
     <style>
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 2.5rem;
         }
 
         .team-member {
@@ -39,9 +39,12 @@
         }
 
         .team-member-image {
-            width: 100%;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1.5rem auto;
         }
 
         .team-info {
@@ -51,11 +54,11 @@
         .team-member h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
-            color: #1e293b;
+            color: #000;
         }
 
         .team-member .role {
-            color: #2563eb;
+            color: #000;
             font-weight: 500;
             margin-bottom: 1rem;
         }
@@ -63,12 +66,12 @@
         .team-member .title,
         .team-member .department,
         .team-member .affiliation {
-            color: #4b5563;
+            color: #222;
             margin-bottom: 0.5rem;
         }
 
         .team-member .research {
-            color: #4b5563;
+            color: #222;
             margin: 1rem 0;
         }
 
@@ -80,8 +83,8 @@
         }
 
         .expertise-tag {
-            background: #f1f5f9;
-            color: #1e293b;
+            background: #eee;
+            color: #000;
             padding: 0.25rem 0.75rem;
             border-radius: 2rem;
             font-size: 0.85rem;
@@ -90,7 +93,7 @@
         }
 
         .expertise-tag:hover {
-            background: #e2e8f0;
+            background: #e0e0e0;
             transform: translateY(-2px);
         }
 
@@ -114,11 +117,11 @@
         .alumni-section {
             margin-top: 4rem;
             padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #e0e0e0;
         }
 
         .alumni-list {
-            background: #f8fafc;
+            background: #fafafa;
             padding: 2rem;
             border-radius: 1rem;
             margin-top: 2rem;
@@ -131,17 +134,30 @@
 
         .alumni-list li {
             padding: 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .alumni-list li:last-child {
             border-bottom: none;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
             .team-grid {
                 grid-template-columns: 1fr;
             }
+        }
+        .phd-section .h2 {
+            margin-bottom: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        .section .h1 {
+            margin-top: 3.5rem;
+            margin-bottom: 2.5rem;
         }
     </style>
 </head>
@@ -149,7 +165,7 @@
     <header>
         <nav>
             <div class="nav-container">
-                <a href="index.html" class="logo">BBioX</a>
+                <a href="index.html" class="logo"><img src="images/Logo_small.png" alt="BBioX Logo" class="logo-img"></a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -165,119 +181,100 @@
     </header>
 
     <main>
-        <section class="people" id="people">
-            <div class="container">
-                <h2>Our Team</h2>
-                
-                <!-- Principal Investigator -->
-                <div class="pi-section">
+        <div class="container">
+            <div class="section">
+                <h2 class="h1">Our Team</h2>
+                <div class="pi-section card" style="margin-bottom: 3rem;">
                     <h3>Principal Investigator</h3>
-                    <div class="team-member pi">
-                        <img src="images/Nazli.jpg" alt="Dr. Nazli Tumer" class="team-member-image">
+                    <div class="team-member pi card">
+                        <img src="images/Nazli.jpg" alt="Dr. Nazli Tumer" class="team-member-image" style="background:#fff;">
                         <div class="team-info">
                             <h3>Dr. Ir. Nazli Tumer</h3>
                             <p class="role">Principal Investigator</p>
-                            <p class="title">Assistant Professor</p>
-                            <p class="department">Department of Biomechanical Engineering</p>
-                            <p class="affiliation">Faculty of Mechanical Engineering, Delft University of Technology</p>
-                            <p class="affiliation">Department of Orthopedics, Erasmus MC</p>
+                            <p class="title">Delft University of Technology & Guest Scientific Researcher - Department of General Practice & Orthopedics and Sports Medicine, Erasmus MC</p>
+                            <p class="research">Research: Developmental Skeletal Biomechanics</p>
                             <div class="expertise-tags">
                                 <span class="expertise-tag">Biomechanics</span>
-                                <span class="expertise-tag">Skeletal Development</span>
+                                <span class="expertise-tag">Skeletal Growth & Development</span>
                                 <span class="expertise-tag">Medical Imaging</span>
+                                <span class="expertise-tag">Machine Learning</span>
                                 <span class="expertise-tag">Computational Modeling</span>
-                                <span class="expertise-tag">Tissue Engineering</span>
-                                <span class="expertise-tag">Orthopedics</span>
+                                <span class="expertise-tag">Implant Design</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- PhD Students -->
                 <div class="phd-section">
-                    <h3>PhD Students</h3>
+                    <h3 class="h2">PhD Students</h3>
                     <div class="team-grid">
-                        <div class="team-member">
-                            <img src="images/edwin.jpg" alt="Ir. Edwin Tay" class="team-member-image">
+                        <div class="card">
+                            <img src="images/edwin.jpg" alt="E. Tay" class="team-member-image">
                             <div class="team-info">
-                                <h3>Ir. Edwin Tay</h3>
+                                <h3>E. Tay</h3>
                                 <p class="role">PhD Candidate</p>
-                                <p class="research">Research: Bone shape and skeletal diseases</p>
+                                <p class="research">Research: Data-Driven Modeling of Bone Growth</p>
                                 <div class="expertise-tags">
-                                    <span class="expertise-tag">Shape Analysis</span>
-                                    <span class="expertise-tag">Medical Imaging</span>
+                                    <span class="expertise-tag">Bone shape analysis</span>
+                                    <span class="expertise-tag">Medical imaging</span>
+                                    <span class="expertise-tag">Machine learning</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/morteza.jpg" alt="M. Homayounfar" class="team-member-image">
+                            <div class="team-info">
+                                <h3>M. Homayounfar</h3>
+                                <p class="role">PhD Candidate</p>
+                                <p class="research">Research: Data-Driven Modeling of Bone Growth</p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Computer vision</span>
                                     <span class="expertise-tag">Machine Learning</span>
-                                    <span class="expertise-tag">Bone Morphology</span>
+                                    <span class="expertise-tag">Shape analysis</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="team-member">
-                            <img src="images/morteza.jpg" alt="Morteza Homayounfar" class="team-member-image">
+                        <div class="card">
+                            <img src="images/mohammad.jpg" alt="M. Mahmoodi Gahr" class="team-member-image">
                             <div class="team-info">
-                                <h3>Morteza Homayounfar</h3>
+                                <h3>M. Mahmoodi Gahr</h3>
                                 <p class="role">PhD Candidate</p>
-                                <p class="research">Research: Skeletal development</p>
+                                <p class="research">Research: Mechanistic Modeling of Bone Growth</p>
                                 <div class="expertise-tags">
-                                    <span class="expertise-tag">Computer Vision</span>
-                                    <span class="expertise-tag">Machine Learning</span>
                                     <span class="expertise-tag">Biomechanics</span>
-                                    <span class="expertise-tag">Data Analysis</span>
+                                    <span class="expertise-tag">Finite Element Analysis</span>
+                                    <span class="expertise-tag">Bone Growth</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="team-member">
-                            <img src="images/mohammad.jpg" alt="Mohammad Mahmoodi Gahr" class="team-member-image">
+                        <div class="card">
+                            <img src="images/sabrina.jpg" alt="Sabrina Hormann" class="team-member-image">
                             <div class="team-info">
-                                <h3>Mohammad Mahmoodi Gahr</h3>
+                                <h3>Sabrina Hormann</h3>
                                 <p class="role">PhD Candidate</p>
-                                <p class="research">Research: Mechanical forces in bone and cartilage</p>
+                                <p class="research">Research: Personalized Musculoskeletal Modeling to estimate knee joint forces</p>
                                 <div class="expertise-tags">
-                                    <span class="expertise-tag">Mechanobiology</span>
-                                    <span class="expertise-tag">Tissue Mechanics</span>
-                                    <span class="expertise-tag">FEM Analysis</span>
-                                    <span class="expertise-tag">Biomaterials</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="team-member">
-                            <img src="images/sabrina.jpg" alt="Sabrina Hörmann" class="team-member-image">
-                            <div class="team-info">
-                                <h3>Sabrina Hörmann</h3>
-                                <p class="role">PhD Candidate</p>
-                                <p class="research">Research: Bone and cartilage biomechanics</p>
-                                <div class="expertise-tags">
-                                    <span class="expertise-tag">Tissue Engineering</span>
                                     <span class="expertise-tag">Biomechanics</span>
-                                    <span class="expertise-tag">Material Testing</span>
-                                    <span class="expertise-tag">Cell Mechanics</span>
+                                    <span class="expertise-tag">Musculoskeletal Modeling</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="team-member">
+                        <div class="card">
                             <img src="images/sara.jpg" alt="Sara Nuvoli" class="team-member-image">
                             <div class="team-info">
                                 <h3>Sara Nuvoli</h3>
                                 <p class="role">PhD Candidate</p>
-                                <p class="research">Research: Skeletal biomechanics</p>
+                                <p class="research">Research: cartilage cellular responses to mechanical load and heterogeneity</p>
                                 <div class="expertise-tags">
                                     <span class="expertise-tag">Biomechanics</span>
-                                    <span class="expertise-tag">Motion Analysis</span>
-                                    <span class="expertise-tag">Clinical Research</span>
-                                    <span class="expertise-tag">Rehabilitation</span>
+                                    <span class="expertise-tag">Tissue Engineering</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Alumni Section -->
-                <div class="alumni-section">
-                    <h2>Alumni</h2>
-                    <div class="alumni-list">
+                <div class="alumni-section section pattern-bg">
+                    <h2 class="h2">Alumni</h2>
+                    <div class="alumni-list card">
                         <ul>
                             <li>Yujiang Peng, Engineering Vibrating Nanopatterns for Killing Bacteria, PostDoc 2021-2022.</li>
                             <li>Liza de Wilde, Exploring depletion effects and binding dynamics in superselective DNA Nanostars, MSc 2023-2024.</li>
@@ -310,26 +307,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-logo-section">
                     <h3>BBioX Research Group</h3>
                     <p>Department of Biomechanical Engineering</p>
                     <p>Faculty of Mechanical Engineering</p>
                     <p>Delft University of Technology</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="people.html">Our Team</a></li>
-                        <li><a href="projects.html">Research Projects</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">

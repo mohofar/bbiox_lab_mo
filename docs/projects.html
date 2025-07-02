@@ -42,12 +42,12 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
-            background-color: #f8fafc;
+            background-color: #fafafa;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: #2563eb;
+            color: #000;
         }
 
         .project-content {
@@ -57,11 +57,11 @@
         .project-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #1e293b;
+            color: #000;
         }
 
         .project-content p {
-            color: #4b5563;
+            color: #222;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
@@ -74,8 +74,8 @@
         }
 
         .project-tag {
-            background: #e0e7ff;
-            color: #2563eb;
+            background: #eee;
+            color: #000;
             padding: 0.25rem 0.75rem;
             border-radius: 1rem;
             font-size: 0.875rem;
@@ -84,17 +84,17 @@
 
         .project-collaborators {
             font-size: 0.875rem;
-            color: #64748b;
+            color: #333;
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #e0e0e0;
         }
 
         .section-intro {
             max-width: 800px;
             margin: 0 auto 3rem;
             text-align: center;
-            color: #475569;
+            color: #444;
             line-height: 1.6;
         }
     </style>
@@ -103,7 +103,7 @@
     <header>
         <nav>
             <div class="nav-container">
-                <a href="index.html" class="logo">BBioX</a>
+                <a href="index.html" class="logo"><img src="images/Logo_small.png" alt="BBioX Logo" class="logo-img"></a>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -119,109 +119,77 @@
     </header>
 
     <main>
-        <section class="about" style="margin-top: 4rem;">
-            <div class="container">
-                <h2>Research Projects</h2>
-                <p class="section-intro">Our research focuses on understanding skeletal development and disorders through advanced biomechanical analysis, computational modeling, and medical imaging. We combine experimental approaches with cutting-edge computational methods to advance treatment strategies.</p>
-                
-                <div class="projects-grid">
+        <div class="container">
+            <div class="section">
+                <h2 class="h1">Research Projects</h2>
+                <div class="projects-grid grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <i class="fas fa-bone"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="project-content">
-                            <h3>Skeletal Shape Analysis and Disease Prediction</h3>
-                            <p>Developing advanced computational methods to analyze bone shape variations and their relationship to skeletal diseases. This project combines medical imaging with machine learning to identify early markers of skeletal disorders and improve diagnostic accuracy.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Medical Imaging</span>
-                                <span class="project-tag">Machine Learning</span>
-                                <span class="project-tag">Shape Analysis</span>
-                                <span class="project-tag">Clinical Applications</span>
-                            </div>
-                            <div class="project-collaborators">
-                                Collaboration with Department of Orthopedics, Erasmus MC
+                            <h3>Data-Driven Modeling of Bone Growth</h3>
+                            <p>We develop bone growth models using clinical and public datasets, integrating statistical shape modeling and deep learning to study how bones grow and change over time. <span class="more-pubs-link" id="morelink1" onclick="toggleMore('more1','morelink1')">More...</span></p>
+                            <div id="more1" style="display:none; color:#222; font-size:0.98em; margin-top:0.5em;">
+                                We develop bone growth models using both publicly available datasets and clinical data from medical centers – most notably the Generation R cohort dataset at Erasmus MC. Our approach integrates a range of techniques, from statistical shape modeling to advanced deep learning methods, to investigate how bones grow and change over time.<br><br>
+                                Some of the key questions we explore include: How does bone shape vary across different age groups? Can we predict joint growth patterns associated with skeletal conditions such as hip dysplasia?<br><br>
+                                Working with pediatric datasets presents unique challenges, including the limited availability of follow-up medical images, restricted use of CT scans, and the complex, nonlinear nature of bone growth - among others. Our team actively addresses these challenges through innovative modeling strategies. Two of our current PhD researchers (Edwin Tay and Morteza Homayounfar) have been closely involved in developing growth models based on medical imaging. While our work has so far focused on the hand and hip regions, the methodologies we develop are broadly applicable. With access to appropriate datasets, these models can be extended to other anatomical regions, offering valuable insights into musculoskeletal development and disease.
                             </div>
                         </div>
                     </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-microscope"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Biomechanical Analysis of Joint Development</h3>
-                            <p>Investigating the mechanical forces and their influence on joint development and adaptation. This research combines experimental biomechanics with computational modeling to understand how mechanical loading affects skeletal growth and remodeling.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Biomechanics</span>
-                                <span class="project-tag">Tissue Engineering</span>
-                                <span class="project-tag">Computational Modeling</span>
-                                <span class="project-tag">Joint Development</span>
-                            </div>
-                            <div class="project-collaborators">
-                                In collaboration with Faculty of Mechanical Engineering, TU Delft
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Computer Vision for Skeletal Assessment</h3>
-                            <p>Developing advanced computer vision and deep learning techniques for automated analysis of medical images in skeletal assessment. This project aims to improve the accuracy and efficiency of diagnostic procedures in orthopedics.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Computer Vision</span>
-                                <span class="project-tag">Deep Learning</span>
-                                <span class="project-tag">Medical Imaging</span>
-                                <span class="project-tag">Diagnostic Tools</span>
-                            </div>
-                            <div class="project-collaborators">
-                                Joint project with Medical Imaging Department
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="project-card">
                         <div class="project-image">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <div class="project-content">
-                            <h3>Patient-Specific Implant Design</h3>
-                            <p>Creating innovative approaches for designing and optimizing patient-specific implants using computational modeling and additive manufacturing. This research focuses on improving implant performance and surgical outcomes through personalized solutions.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Implant Design</span>
-                                <span class="project-tag">FEM Analysis</span>
-                                <span class="project-tag">3D Printing</span>
-                                <span class="project-tag">Surgical Planning</span>
+                            <h3>Mechanistic Modeling of Bone Growth and Adaptation</h3>
+                            <p>We use computational pipelines and finite element methods to simulate how mechanical loading influences bone growth and shape. <span class="more-pubs-link" id="morelink2" onclick="toggleMore('more2','morelink2')">More...</span></p>
+                            <div id="more2" style="display:none; color:#222; font-size:0.98em; margin-top:0.5em;">
+                                Mechanical forces play a vital role in how bones develop, grow, and adapt. To better understand these processes, we are developing (semi-)automated computational pipelines—primarily based on the finite element method—to simulate how mechanical loading influences bone growth and shape over time. One of the key questions we explore is whether certain loading conditions, such as those that can be modified through non-invasive physical exercise, can help prevent the development of skeletal disorders.<br><br>
+                                One of our current PhD researchers (Mohammad Mahmoodi Gahr) is actively developing automated modeling workflows to study bone growth, adaptation, and the effects of mechanical forces on these processes. Supported by several MSc projects, we are contributing to the development of computational models aimed at improving surgical planning and advancing care in (pediatric) orthopedics. One of our recent research focuses is guided growth—a minimally invasive technique that manipulates the growth plate to correct deformities during childhood development. While this method shows strong clinical potential, not all patients respond optimally, and challenges remain in improving correction rates and understanding long-term outcomes. In collaboration with pediatric orthopedic surgeons, we aim to address these gaps through advanced simulation and modeling, ultimately enhancing both surgical strategies and patient outcomes.
                             </div>
-                            <div class="project-collaborators">
-                                Collaboration with Clinical Partners
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Biomechanics for (Personalized) Joint Health</h3>
+                            <p>We combine computational modeling, machine learning, and experiments to study how physical activity and mechanical environments affect joint health. <span class="more-pubs-link" id="morelink3" onclick="toggleMore('more3','morelink3')">More...</span></p>
+                            <div id="more3" style="display:none; color:#222; font-size:0.98em; margin-top:0.5em;">
+                                Both overloading and underloading of tissues—such as cartilage—can contribute to their degeneration. However, the factors that lead to pathological loading, particularly at the individual level, are not yet fully understood. To gain better insight into these processes, we integrate (personalized) computational modeling, machine learning, and experimental approaches to study how physical activity and mechanical environments affect joint behavior and tissue health.<br><br>
+                                For instance, PhD researcher Sabrina Hormann focuses on estimating knee joint contact forces during various physical activities in both healthy individuals and those with early-stage osteoarthritis. This project also involves developing machine learning models for the instant prediction of knee joint contact forces. In parallel, together with PhD researcher Sara Nuvoli, we are investigating how cartilage cells respond to mechanical loading and structural heterogeneity, aiming to better understand their role in tissue adaptation and degeneration.<br><br>
+                                Together, these research efforts support our broader goal: advancing the use of biomechanics to improve the prevention, diagnosis, and treatment of musculoskeletal conditions.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-bone"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Bone Shape Analysis for Skeletal Disorders and Implant Development</h3>
+                            <p>We study how bone shape influences disease and develop pipelines for patient-specific implant design and evaluation. <span class="more-pubs-link" id="morelink4" onclick="toggleMore('more4','morelink4')">More...</span></p>
+                            <div id="more4" style="display:none; color:#222; font-size:0.98em; margin-top:0.5em;">
+                                Understanding the relationship between bone morphology and skeletal disorders is essential for early diagnosis, prevention, and the development of effective treatments and implant solutions. In this research line, we explore how variations in bone shape influence disease development, progression, and clinical outcomes.<br><br>
+                                Our work ranges from developing implant design pipelines -using techniques such as statistical shape modeling and deep learning-to creating and evaluating (custom) implants for anatomical structures like the mandible and lunate. We also use computational modeling and experimental approaches to assess the (mechanical) performance of these designs. In parallel, we investigate how anatomical differences and implant shape variations affect functional outcomes, with the goal of supporting more effective, patient-specific implant design and surgical planning.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-logo-section">
                     <h3>BBioX Research Group</h3>
                     <p>Department of Biomechanical Engineering</p>
                     <p>Faculty of Mechanical Engineering</p>
                     <p>Delft University of Technology</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="people.html">Our Team</a></li>
-                        <li><a href="projects.html">Research Projects</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -239,6 +207,18 @@
             navLinks.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
         });
+
+        function toggleMore(id, linkid) {
+            var el = document.getElementById(id);
+            var link = document.getElementById(linkid);
+            if (el.style.display === 'none') {
+                el.style.display = 'block';
+                if (link) link.style.display = 'none';
+            } else {
+                el.style.display = 'none';
+                if (link) link.style.display = 'inline';
+            }
+        }
     </script>
 </body>
 </html> 
