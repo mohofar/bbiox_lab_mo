@@ -1,3 +1,5 @@
+/* Cleaned up: Most styles are now handled by index-X5HylaET.css. Keep only unique or custom styles here. */
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -8,7 +10,7 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #111;
     background-color: #fff;
 }
 
@@ -17,6 +19,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    padding-bottom: 4rem;
 }
 
 /* Navigation */
@@ -28,12 +31,14 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    height: 64px;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
+    height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,13 +47,20 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: #1d4ed8;
+    color: #222;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .mobile-menu-btn {
@@ -68,7 +80,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #4b5563;
+    color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5rem 0;
@@ -82,7 +94,7 @@ header {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #2563eb;
+    background-color: #000;
     transition: width 0.3s ease;
 }
 
@@ -93,21 +105,22 @@ header {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #2563eb;
+    color: #000;
 }
 
 /* Main Content */
 main {
     margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #1e293b;
+    background-color: #fff !important;
+    color: #000;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
     text-align: center;
     padding: 150px 20px;
     position: relative;
@@ -119,12 +132,12 @@ main {
 }
 
 .hero-overlay {
+    background: none !important;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(30, 41, 59, 0.7);
     z-index: 1;
 }
 
@@ -140,10 +153,9 @@ main {
     margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.2;
-    background: linear-gradient(45deg, #60a5fa, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: none;
+    color: #000;
+    -webkit-text-fill-color: #000;
 }
 
 .hero-scroll-indicator {
@@ -151,7 +163,7 @@ main {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #000;
     font-size: 2rem;
     cursor: pointer;
     animation: bounce 2s infinite;
@@ -190,7 +202,7 @@ main {
     top: 100px;
     height: fit-content;
     padding: 25px;
-    background: #f8fafc;
+    background: #fafafa;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     margin-top: 80px;
@@ -199,9 +211,9 @@ main {
 .news-content h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #1e293b;
+    color: #111;
     padding-bottom: 10px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .news-list {
@@ -227,16 +239,17 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .news-date {
-    color: #64748b;
+    color: #666;
     font-size: 0.85em;
 }
 
 .news-tag {
-    background: #e0e7ff;
-    color: #4338ca;
+    background: #e0e0e0;
+    color: #000;
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 0.75em;
@@ -245,7 +258,7 @@ main {
 }
 
 .news-item h3 {
-    color: #1e293b;
+    color: #111;
     font-size: 1.1em;
     margin-bottom: 5px;
     font-weight: 600;
@@ -259,7 +272,7 @@ main {
 }
 
 .link-arrow {
-    color: #2563eb;
+    color: #000;
     text-decoration: none;
     font-weight: 500;
     display: inline-flex;
@@ -271,10 +284,11 @@ main {
 
 .link-arrow i {
     transition: transform 0.3s ease;
+    color: #000;
 }
 
 .link-arrow:hover {
-    color: #1d4ed8;
+    color: #222;
 }
 
 .link-arrow:hover i {
@@ -310,7 +324,7 @@ main {
 
 h2 {
     font-size: 2.5em;
-    color: #1e293b;
+    color: #111;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -322,7 +336,7 @@ h2 {
 
 .highlight {
     font-size: 2em;
-    color: #2563eb;
+    color: #000;
     font-weight: 600;
     line-height: 1.4;
     max-width: 800px;
@@ -330,8 +344,8 @@ h2 {
 }
 
 .mission-box {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: white;
+    background: #fafafa;
+    color: #000;
     padding: 40px;
     border-radius: 12px;
     text-align: center;
@@ -362,28 +376,28 @@ h2 {
 
 .approach-item i {
     font-size: 2.5em;
-    color: #2563eb;
+    color: #000;
     margin-bottom: 15px;
 }
 
 .approach-item span {
     display: block;
     font-size: 1.2em;
-    color: #1e293b;
+    color: #111;
     font-weight: 500;
 }
 
 .approach-description {
     text-align: center;
     font-size: 1.2em;
-    color: #475569;
+    color: #444;
     max-width: 800px;
     margin: 40px auto 0;
 }
 
 /* Footer */
 footer {
-    background-color: #1e293b;
+    background-color: #111;
     color: white;
     padding: 60px 0 20px;
 }
@@ -415,13 +429,13 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #cbd5e1;
+    color: #eee;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #60a5fa;
+    color: #fff;
 }
 
 .footer-bottom {
@@ -433,6 +447,19 @@ footer {
 .footer-bottom p {
     color: #94a3b8;
     font-size: 0.9em;
+}
+
+.footer-logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* Responsive Design */
@@ -757,4 +784,30 @@ footer {
     margin-bottom: 30px;
     font-size: 1.8em;
     text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.col-8 {
+    grid-column: 1 / span 2;
+}
+
+.col-4 {
+    grid-column: 3 / span 1;
+}
+
+.section .h1, .section .h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-radius: 1rem;
+    background: #fff;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
 } 
