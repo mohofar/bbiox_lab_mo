@@ -38,12 +38,6 @@
             background: #fff;
             padding: 3rem 0;
         }
-        .contact-container {
-            display: flex;
-            gap: 3rem;
-            margin-top: 3rem;
-            justify-content: center;
-        }
         .contact-info {
             background: #000;
             color: #fff;
@@ -156,6 +150,14 @@
         .social-links a:hover {
             color: #222 !important;
         }
+        .section.grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2.5rem;
+        }
+        .col-6 {
+            grid-column: span 6;
+        }
     </style>
 </head>
 <body>
@@ -180,7 +182,7 @@
     <main>
         <div class="container">
             <div class="section grid">
-                <div class="col-6 card">
+                <div class="col-6 card contact-info">
                     <h3 class="h2">Get in Touch</h3>
                     <div class="contact-details">
                         <div class="contact-item">
@@ -202,7 +204,7 @@
                         <a href="#"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="col-6 card">
+                <div class="col-6 card contact-form">
                     <h3 class="h2">Send us a Message</h3>
                     <form action="#" method="POST">
                         <div class="form-group">
